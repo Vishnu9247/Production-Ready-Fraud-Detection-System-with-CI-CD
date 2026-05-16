@@ -130,6 +130,6 @@ def complete_preprocessing_pipeline(input_path, output_path):
 
 
 if __name__ == "__main__":
-    input_path = r'Data Files\Raw Files\*.csv'
-    output_path = r'Data Files\Processed Files\preprocessed_data.csv'
+    input_path = 'Data Files/Raw Files/*.csv'
+    output_path = 'Data Files/Processed Files/preprocessed_data.csv'
     complete_preprocessing_pipeline(input_path, output_path)
