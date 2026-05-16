@@ -304,7 +304,6 @@ Production-Ready Fraud Detection System with CI CD
 
 # Future Improvements
 
-* MLflow experiment tracking
 * Drift detection
 * Automated monitoring
 * Batch inference pipelines
