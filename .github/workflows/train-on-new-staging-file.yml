@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "Data Files/Staging/**"
+      - "Data Files/Raw Files/**"
 
 jobs:
   train-build-deploy:
