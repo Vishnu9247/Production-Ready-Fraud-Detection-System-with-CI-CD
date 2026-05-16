@@ -81,3 +81,4 @@ tmp/
 !App/main.py
 !App/*.pkl
 !App/requirements.txt
+Testing/01_API_test.ipynb
