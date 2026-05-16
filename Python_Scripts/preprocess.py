@@ -4,7 +4,9 @@ import numpy as np
 from datetime import datetime
 
 def load_data(path):
-    all_files = glob.glob(path + "/*.csv")
+    all_files = glob.glob(path)
+    if not all_files:
+        raise FileNotFoundError(f"No CSV files found in: {path}")
     df = pd.concat((pd.read_csv(f) for f in all_files), ignore_index=True)
     df.columns = (
         df.columns
@@ -128,6 +130,6 @@ def complete_preprocessing_pipeline(input_path, output_path):
 
 
 if __name__ == "__main__":
-    input_path = '..\Data Files\Raw Files'
-    output_path = '..\Data Files\Processed Files\preprocessed_data.csv'
+    input_path = r'Data Files\Raw Files\*.csv'
+    output_path = r'Data Files\Processed Files\preprocessed_data.csv'
     complete_preprocessing_pipeline(input_path, output_path)
