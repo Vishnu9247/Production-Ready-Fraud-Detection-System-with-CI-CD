@@ -1,10 +1,83 @@
-# Python-generated files
+# =========================
+# Python
+# =========================
 __pycache__/
-*.py[oc]
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Virtual Environments
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# MLflow
+# =========================
+mlruns/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Build / Cache
+# =========================
 build/
 dist/
-wheels/
-*.egg-info
+*.egg-info/
+.pytest_cache/
+.cache/
 
-# Virtual environments
-.venv
+# =========================
+# Secrets / Environment
+# =========================
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+kaggle.json
+
+# =========================
+# UV
+# =========================
+.python-version
+
+# =========================
+# Temporary files
+# =========================
+temp/
+tmp/
+*.tmp
+
+# =========================
+# Keep important files
+# =========================
+!README.md
+!requirements.txt
+!pyproject.toml
+!uv.lock
+!App/Dockerfile
+!App/main.py
+!App/*.pkl
+!App/requirements.txt
