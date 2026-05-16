@@ -8,7 +8,6 @@ ydata-profiling==4.16.1
 sweetviz==2.3.1
 glom
 pathlib
-shutil
 
 # Jupyter
 jupyter==1.1.1
@@ -20,10 +19,6 @@ scikit-learn==1.6.1
 xgboost==3.0.0
 lightgbm==4.6.0
 imblearn==0.0
-
-# Deep Learning
-torch==2.7.0
-torchvision==0.22.0
 
 # MLflow
 mlflow==2.22.0
@@ -39,10 +34,6 @@ pydantic==2.11.4
 # Utilities
 python-dotenv==1.1.0
 tqdm==4.67.1
-
-# Database
-sqlalchemy==2.0.40
-psycopg2-binary==2.9.10
 
 # Monitoring
 prometheus-client==0.21.1

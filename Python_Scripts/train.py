@@ -87,19 +87,33 @@ def select_best_model(model_performance_list):
     return best_model
 
 
-def replace_model(model, model_name):
-    folder = Path("../App")
-    pkl_file = next(folder.glob("*.pkl"))
-    version = re.search(r'v(\d+)', pkl_file.name).group(1)
-    version = int(version) + 1
-    new_model_name = f'best_model_v{version}.pkl'
-    joblib.dump(model, folder / new_model_name)
-    old_model_path = folder / pkl_file.name
-    if old_model_path.exists():
-        old_model_path.unlink()
-        destination_folder = "../Models/archive"
-        shutil.move(old_model_path, destination_folder/pkl_file.name)
+def replace_model(model):
 
+    app_folder = Path("../App")
+    archive_folder = Path("../Models/archive")
+
+    archive_folder.mkdir(parents=True, exist_ok=True)
+
+    # Existing model
+    old_model_path = next(app_folder.glob("*.pkl"))
+
+    # Extract version
+    version = re.search(r'v(\d+)', old_model_path.name).group(1)
+    version = int(version) + 1
+
+    # New model name
+    new_model_name = f"best_model_v{version}.pkl"
+
+    # Move old model to archive
+    archived_model_path = archive_folder / old_model_path.name
+    old_model_path.rename(archived_model_path)
+
+    # Save new model
+    new_model_path = app_folder / new_model_name
+    joblib.dump(model, new_model_path)
+
+    print(f"Archived: {archived_model_path.name}")
+    print(f"Saved new model: {new_model_name}")
 
 
 def train_and_save_model():
