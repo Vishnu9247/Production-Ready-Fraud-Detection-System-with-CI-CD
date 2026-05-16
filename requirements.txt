@@ -6,7 +6,7 @@ plotly==6.0.1
 
 ydata-profiling==4.16.1
 sweetviz==2.3.1
-glom==0.1.0
+glom
 pathlib
 shutil
 
