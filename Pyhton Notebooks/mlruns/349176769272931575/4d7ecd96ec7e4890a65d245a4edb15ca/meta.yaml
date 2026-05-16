@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/Git%20Repo%202/Production-Ready%20Fraud%20Detection%20System%20with%20CI%20CD/Pyhton%20Scripts/mlruns/349176769272931575/4d7ecd96ec7e4890a65d245a4edb15ca/artifacts
+end_time: 1778817899602
+entry_point_name: ''
+experiment_id: '349176769272931575'
+lifecycle_stage: active
+run_id: 4d7ecd96ec7e4890a65d245a4edb15ca
+run_name: HistGradientBoostingClassifier Hyperparameter Tuning
+run_uuid: 4d7ecd96ec7e4890a65d245a4edb15ca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778817865334
+status: 3
+tags: []
+user_id: VISHNU
